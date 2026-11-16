@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư — Nhận xét nhanh SMIS</title>
+<style>
+  :root { --nen: #f5f3ff; --chu: #1e1b4b; --mo: #475569; --vien: #e0e7ff; --chinh: #4f46e5; }
+  @media (prefers-color-scheme: dark) { :root { --nen: #0f0e1f; --chu: #e0e7ff; --mo: #a5b4fc; --vien: #312e81; --chinh: #a5b4fc; } }
+  body { margin: 0; background: var(--nen); color: var(--chu); font: 16px/1.6 "Segoe UI", system-ui, Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  h2 { font-size: 18px; margin: 26px 0 6px; color: var(--chinh); }
+  p, li { color: var(--chu); }
+  .mo { color: var(--mo); font-size: 14px; }
+  .the { border: 1px solid var(--vien); border-radius: 14px; padding: 14px 18px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="./">← Trang chủ</a></p>
+  <h1>Chính sách quyền riêng tư</h1>
+  <p class="mo">Tiện ích «Nhận xét nhanh SMIS» · cập nhật ngày 15/11/2026</p>
+
+  <div class="the"><b>Tóm tắt:</b> dữ liệu học sinh không bao giờ rời trình duyệt của thầy cô. Để quản lý dùng thử và gói đã mua, máy chủ của tiện ích chỉ lưu <b>email Google</b> của giáo viên, mã chuyển khoản, hạn dùng và lịch sử nộp tiền.</div>
+
+  <h2>1. Tiện ích đọc gì trên trang</h2>
+  <p>Khi thầy cô bấm nút trong tiện ích, tiện ích đọc trên trang smis.moet.edu.vn đang mở: tiêu đề trang, ô Khối – Lớp – Môn – Thời điểm đánh giá, cột STT, cột mức đạt được / điểm, và các ô nhận xét. Tiện ích <b>không đọc</b> cột họ tên, ngày sinh, giới tính, mã định danh.</p>
+
+  <h2>2. Tiện ích lưu gì</h2>
+  <ul>
+    <li>Kho câu nhận xét và cài đặt do thầy cô soạn.</li>
+    <li>Mức thầy cô chọn cho từng STT ở trang nhận xét GVCN (chỉ số thứ tự và mức, không có tên).</li>
+  </ul>
+  <p>Các dữ liệu này nằm trong bộ nhớ của trình duyệt (chrome.storage.local) trên máy của thầy cô. Gỡ tiện ích là xoá hết.</p>
+
+  <h2>3. Đăng nhập, thu phí và những gì gửi đi</h2>
+  <ul>
+    <li><b>Đăng nhập Google:</b> tiện ích chỉ xin quyền xem <b>địa chỉ email</b> (phạm vi «openid email»), không xin quyền đọc thư, danh bạ hay tệp.</li>
+    <li><b>Máy chủ thu phí</b> (Google Apps Script của tác giả, lưu trên Google Sheet riêng): nhận mã đăng nhập để biết email, trả lại hạn dùng và số lượt dùng thử. Máy chủ lưu: email, mã chuyển khoản 6 ký tự, ngày hết hạn, thời điểm và số lần dùng thử.</li>
+    <li><b>Nộp tiền:</b> thầy cô chuyển khoản trực tiếp qua ứng dụng ngân hàng của mình. Tiện ích và máy chủ <b>không</b> nhận, không lưu số thẻ, mật khẩu ngân hàng. Dịch vụ báo biến động số dư (SePay/Casso) gửi cho máy chủ: số tiền, nội dung chuyển khoản, mã giao dịch — để tự mở khoá.</li>
+    <li>Ảnh mã QR chuyển khoản được tạo bởi dịch vụ VietQR (img.vietqr.io) từ số tài khoản của tác giả, số tiền và mã chuyển khoản.</li>
+    <li>Tiện ích không dùng công cụ thống kê, quảng cáo hay theo dõi, không bán dữ liệu cho ai.</li>
+  </ul>
+  <p>Muốn xoá thông tin tài khoản: nhắn tác giả qua email bên dưới.</p>
+
+  <h2>4. Quyền tiện ích xin</h2>
+  <ul>
+    <li><b>Truy cập smis.moet.edu.vn</b>: để điền nhận xét vào ô trên trang này. Tiện ích không chạy trên trang web nào khác.</li>
+    <li><b>storage</b>: lưu kho câu và cài đặt trên máy.</li>
+    <li><b>scripting</b>: nạp lại phần điền nhận xét khi trang SMIS đã mở trước lúc cài tiện ích.</li>
+    <li><b>identity</b>: mở cửa sổ đăng nhập Google để biết email người dùng.</li>
+    <li><b>Truy cập script.google.com</b>: hỏi máy chủ thu phí về hạn dùng, lượt dùng thử.</li>
+  </ul>
+
+  <h2>5. Tiện ích không làm</h2>
+  <p>Không tự bấm «Ghi», không đăng nhập SMIS hộ, không đọc hay lưu mật khẩu, không thay đổi điểm hay mức đạt được. Nhận xét điền vào chỉ là gợi ý; thầy cô đọc lại và tự lưu.</p>
+
+  <h2>6. Liên hệ</h2>
+  <p>Tác giả: Nguyễn Văn Phúc · Email: <a href="mailto:baophucgv@gmail.com">baophucgv@gmail.com</a></p>
+  <p class="mo">«Nhận xét nhanh SMIS» là tiện ích độc lập, không phải sản phẩm của Bộ Giáo dục và Đào tạo và không liên kết với đơn vị vận hành SMIS.</p>
+</main>
+</body>
+</html>

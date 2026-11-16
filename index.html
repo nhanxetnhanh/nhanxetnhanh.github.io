@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nhận xét nhanh SMIS — điền nhận xét học bạ lớp 1–9</title>
+<meta name="description" content="Tiện ích Chrome điền nhận xét học sinh trên SMIS (CSDL ngành) theo mức đạt được, tiểu học và THCS lớp 1–9. Kho gần 2.000 câu, tự sửa được. Dữ liệu học sinh không rời máy.">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --nen: #f5f3ff; --the: #fff; --chu: #1e1b4b; --mo: #475569; --vien: #e0e7ff; --chinh: #4f46e5; --cam: #f59e0b; }
+  @media (prefers-color-scheme: dark) { :root { --nen: #0f0e1f; --the: #1a1833; --chu: #e0e7ff; --mo: #a5b4fc; --vien: #312e81; --chinh: #a5b4fc; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--nen); color: var(--chu); font: 16px/1.6 "Segoe UI", system-ui, Arial, sans-serif; }
+  .dau { background: linear-gradient(120deg, #4338ca, #7c3aed 60%, #db2777); color: #fff; padding: 40px 16px 56px; }
+  .khung { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  .dau .khung { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+  .dau img { width: 88px; height: 88px; border-radius: 22px; background: #fff3; }
+  .dau h1 { margin: 0; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; }
+  .dau p { margin: 8px 0 0; font-size: 18px; opacity: .92; max-width: 640px; }
+  .nut { display: inline-block; margin-top: 16px; background: #fff; color: #4338ca; font-weight: 700; padding: 12px 20px; border-radius: 12px; text-decoration: none; }
+  .anh { margin: -32px auto 0; max-width: 980px; padding: 0 16px; }
+  .anh img { width: 100%; border-radius: 16px; box-shadow: 0 20px 50px #0003; display: block; }
+  h2 { font-size: 24px; margin: 40px 0 12px; }
+  .luoi { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .the { background: var(--the); border: 1px solid var(--vien); border-radius: 16px; padding: 16px 18px; }
+  .the b { display: block; font-size: 17px; margin-bottom: 4px; }
+  .the span { color: var(--mo); font-size: 15px; }
+  .goi { text-align: center; }
+  .goi .gia { font-size: 30px; font-weight: 800; color: var(--chinh); }
+  .goi.noi { border: 2px solid var(--cam); }
+  .chan { color: var(--mo); font-size: 14px; text-align: center; padding: 36px 16px 48px; }
+  .chan a, main a { color: var(--chinh); }
+</style>
+</head>
+<body>
+  <header class="dau">
+    <div class="khung">
+      <img src="icon.png" alt="">
+      <div>
+        <h1>Nhận xét nhanh SMIS</h1>
+        <p>Tiện ích trình duyệt điền nhận xét học sinh trên SMIS (CSDL ngành) theo mức đạt được — tiểu học và THCS, lớp 1–9.</p>
+        <a class="nut" href="#gia">Dùng thử miễn phí 1 ngày</a>
+      </div>
+    </div>
+  </header>
+  <div class="anh"><img src="anh-1.png" alt="Tiện ích điền nhận xét trên trang SMIS mô phỏng (tên học sinh là mã giả)"></div>
+
+  <main class="khung">
+    <h2>Làm được gì</h2>
+    <div class="luoi">
+      <div class="the"><b>📘 Môn học</b><span>Đọc cột Mức đạt được T/H/C (tiểu học), ĐTB hoặc Đạt/Chưa đạt (THCS), chọn câu hợp mức cho từng em.</span></div>
+      <div class="the"><b>⚡ Năng lực – Phẩm chất</b><span>Điền cùng lúc 3 ô nhận xét, ghép đúng tên năng lực, phẩm chất còn «Cần cố gắng».</span></div>
+      <div class="the"><b>📓 Học bạ GVCN · 🏅 Rèn luyện</b><span>Chọn mức từng STT hoặc dán cột từ Excel; giữ đúng giới hạn 200/900 ký tự.</span></div>
+      <div class="the"><b>✍ Kho câu của riêng thầy cô</b><span>Gần 2.000 câu mẫu, 15–25 câu mỗi môn mỗi mức. Bật/tắt, sửa, thêm câu của mình.</span></div>
+      <div class="the"><b>🔒 Riêng tư</b><span>Không đọc họ tên, ngày sinh, mã định danh. Dữ liệu học sinh không rời máy. Không tự bấm «Ghi».</span></div>
+      <div class="the"><b>↶ An toàn</b><span>Chỉ điền ô trống, có Hoàn tác. Nhận xét là gợi ý — thầy cô đọc lại rồi tự lưu.</span></div>
+    </div>
+
+    <h2 id="gia">Giá</h2>
+    <div class="luoi">
+      <div class="the goi"><b>Dùng thử</b><div class="gia">0đ</div><span>1 ngày · 5 lần điền · mỗi lần 5 em</span></div>
+      <div class="the goi"><b>1 năm</b><div class="gia">34.000đ</div><span>365 ngày</span></div>
+      <div class="the goi noi"><b>2 năm</b><div class="gia">52.000đ</div><span>730 ngày</span></div>
+      <div class="the goi"><b>3 năm</b><div class="gia">70.000đ</div><span>1.095 ngày</span></div>
+    </div>
+    <p style="color:var(--mo)">Đăng nhập Google trong tiện ích → quét mã QR chuyển khoản → khoảng 1 phút sau tự mở khoá.</p>
+
+    <h2>Cài đặt</h2>
+    <div class="the"><span>Tiện ích sắp có trên Cửa hàng Chrome trực tuyến. Dùng được trên Chrome, Cốc Cốc, Edge máy tính.</span></div>
+  </main>
+
+  <footer class="chan">
+    <a href="chinh-sach-rieng-tu.html">Chính sách quyền riêng tư</a> · <a href="dieu-khoan.html">Điều khoản sử dụng</a> · Liên hệ: <a href="mailto:baophucgv@gmail.com">baophucgv@gmail.com</a><br>
+    «Nhận xét nhanh SMIS» là tiện ích độc lập của tác giả Nguyễn Văn Phúc, không phải sản phẩm của Bộ Giáo dục và Đào tạo.
+  </footer>
+</body>
+</html>
