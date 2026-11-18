@@ -28,6 +28,23 @@
   .goi { text-align: center; }
   .goi .gia { font-size: 30px; font-weight: 800; color: var(--chinh); }
   .goi.noi { border: 2px solid var(--cam); }
+  .nut.cam { background: linear-gradient(120deg, #f59e0b, #ea580c); color: #fff; margin-left: 8px; }
+  .nut.chinh { background: linear-gradient(120deg, #4f46e5, #7c3aed); color: #fff; box-shadow: 0 6px 18px #6d28d955; }
+  .nut-hang { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .nut-hang .nut { margin: 16px 0 0; }
+  .gia4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 820px) { .gia4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 420px) { .gia4 { grid-template-columns: 1fr; } }
+  .goi { position: relative; }
+  .goi i { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); font-style: normal; font-size: 12px; font-weight: 700; color: #fff; background: var(--cam); padding: 2px 10px; border-radius: 99px; white-space: nowrap; }
+  .goi i.tim { background: #7c3aed; }
+  .buoc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; counter-reset: b; }
+  @media (max-width: 820px) { .buoc { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 420px) { .buoc { grid-template-columns: 1fr; } }
+  .buoc .the { counter-increment: b; position: relative; padding-top: 44px; }
+  .buoc .the::before { content: counter(b); position: absolute; top: 12px; left: 16px; width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg, #4f46e5, #db2777); color: #fff; font-weight: 800; display: grid; place-items: center; font-size: 14px; }
+  .buoc svg { position: absolute; top: 12px; right: 14px; width: 30px; height: 30px; opacity: .85; }
+  .cai { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; justify-content: space-between; }
   .chan { color: var(--mo); font-size: 14px; text-align: center; padding: 36px 16px 48px; }
   .chan a, main a { color: var(--chinh); }
 </style>
@@ -39,7 +56,10 @@
       <div>
         <h1>Nhận xét nhanh SMIS</h1>
         <p>Tiện ích trình duyệt điền nhận xét học sinh trên SMIS (CSDL ngành) theo mức đạt được — tiểu học và THCS, lớp 1–9.</p>
-        <a class="nut" href="#gia">Dùng thử miễn phí 1 ngày</a>
+        <div class="nut-hang">
+          <a class="nut" href="https://chromewebstore.google.com/detail/mbjffpkghaianjofeppcdggkopejiaah" target="_blank" rel="noopener">⬇ Cài vào Chrome — miễn phí</a>
+          <a class="nut cam" href="#cach-mua">Dùng thử 1 ngày · xem giá</a>
+        </div>
       </div>
     </div>
   </header>
@@ -57,16 +77,26 @@
     </div>
 
     <h2 id="gia">Giá</h2>
-    <div class="luoi">
+    <div class="gia4">
       <div class="the goi"><b>Dùng thử</b><div class="gia">0đ</div><span>1 ngày · 5 lần điền · mỗi lần 5 em</span></div>
       <div class="the goi"><b>1 năm</b><div class="gia">34.000đ</div><span>365 ngày</span></div>
-      <div class="the goi noi"><b>2 năm</b><div class="gia">52.000đ</div><span>730 ngày</span></div>
-      <div class="the goi"><b>3 năm</b><div class="gia">70.000đ</div><span>1.095 ngày</span></div>
+      <div class="the goi"><i class="tim">−24%</i><b>2 năm</b><div class="gia">52.000đ</div><span>730 ngày · ≈ 26.000đ/năm</span></div>
+      <div class="the goi noi"><i>Tiết kiệm 31%</i><b>3 năm</b><div class="gia">70.000đ</div><span>1.095 ngày · ≈ 23.300đ/năm</span></div>
     </div>
-    <p style="color:var(--mo)">Đăng nhập Google trong tiện ích → quét mã QR chuyển khoản → khoảng 1 phút sau tự mở khoá.</p>
+
+    <h2 id="cach-mua">Cách mua — 4 bước</h2>
+    <div class="buoc">
+      <div class="the"><svg viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><b>Cài tiện ích</b><span>Mở <a href="https://chromewebstore.google.com/detail/mbjffpkghaianjofeppcdggkopejiaah" target="_blank" rel="noopener">trang Cửa hàng Chrome</a> → «Thêm vào Chrome». Bấm 🧩 → ghim 📌.</span></div>
+      <div class="the"><svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><b>Đăng nhập Google</b><span>Bấm biểu tượng tiện ích → «Đăng nhập Google». Được dùng thử ngay 1 ngày.</span></div>
+      <div class="the"><svg viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18"/></svg><b>Bấm «💎 Mua»</b><span>Nút cam trên cùng khung tiện ích. Chọn gói 1, 2 hoặc 3 năm.</span></div>
+      <div class="the"><svg viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v7h-6"/></svg><b>Quét QR, xong!</b><span>Quét mã bằng app ngân hàng (đã có sẵn số tiền, nội dung). Khoảng 1 phút sau tự mở khoá.</span></div>
+    </div>
 
     <h2>Cài đặt</h2>
-    <div class="the"><span>Tiện ích sắp có trên Cửa hàng Chrome trực tuyến. Dùng được trên Chrome, Cốc Cốc, Edge máy tính.</span></div>
+    <div class="the cai">
+      <span>Có trên <b style="display:inline;font-size:inherit">Cửa hàng Chrome trực tuyến</b>. Dùng được trên Chrome, Cốc Cốc, Edge máy tính.</span>
+      <a class="nut chinh" href="https://chromewebstore.google.com/detail/mbjffpkghaianjofeppcdggkopejiaah" target="_blank" rel="noopener" style="margin:0">⬇ Cài vào Chrome</a>
+    </div>
   </main>
 
   <footer class="chan">
